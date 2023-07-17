@@ -14,7 +14,7 @@ function getAllUser (req, res) {
 }
 
 function getUserById (req, res) {
-    const userId = req.params.userId;
+    const userId = req.params.id;
     let user = arrUser.filter(user => user.id == userId);
     res.send(user);
 }
@@ -26,7 +26,7 @@ function getUserByNameandAge (req, res) {
 }
 
 function actionDelete (req, res) {
-    const userId = req.params.userId;
+    const userId = req.params.id;
     let user = arrUser.filter(user => user.id !== +userId);
     res.send(user);
 }
